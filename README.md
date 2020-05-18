@@ -9,3 +9,4 @@ sudo chmod +x setup.sh
 ```
 after this you'll get a shortcut in your system with the name rogrgbcontrol 
 ## version 2 with gui will be out soon
+Want to buy me a coffee: https://www.paypal.me/drunkcj
