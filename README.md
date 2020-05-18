@@ -1,7 +1,11 @@
-# rog-rgb-control keyboard for linux
-requirements : rogauracore must be installed (link for installation : https://github.com/wroberts/rogauracore)
-
-a simple bash script with menu to control rgb colors of asus rog laptops in linux 
-just download the script rogrgbcontrol and give it execution permissions 
-then run it as root through terminal by ./rogrgbcontrol.sh 
-
+# Keyborad rgb control for ASUS ROG Series
+Ive creating some scripts to download and setup rogauracore on your linux laptop. This would create a launcher for the script to change your color and brightness by input
+Steps:
+```
+git clone https://github.com/drunckj/rog-rgb-control.git
+cd rog-rgb-control/
+sudo chmod +x setup.sh
+./setup.sh
+```
+after this you'll get a shortcut in your system with the name rogrgbcontrol 
+## version 2 with gui will be out soon
