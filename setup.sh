@@ -1,8 +1,8 @@
 
 #!/bin/bash
 [ "$UID" -eq 0 ] || exec sudo bash "$0" "$@"
-sudo apt install libusb-1.0-0 libusb-1.0-0-dev
-sudo apt install autoconf
+yes | sudo apt install libusb-1.0-0 libusb-1.0-0-dev 
+yes | sudo apt install autoconf
 cd rogauracore/
 autoreconf -i
 ./configure
