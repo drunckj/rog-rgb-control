@@ -19,3 +19,5 @@ echo "Name=Rogrgbcontrol" >> ~/Desktop/rogrgbcontrol.desktop
 echo "Icon=~/rogrgbcontrol/rog.svg" >> ~/Desktop/rogrgbcontrol.desktop
 echo "Exec=~/rogrgbcontrol/rogrgbcontrol.sh" >> ~/Desktop/rogrgbcontrol.desktop
 chmod +x ~/Desktop/rogrgbcontrol.desktop
+chown root.root /usr/local/bin/rogauracore
+chown u+s /usr/local/bin/rogauracore
