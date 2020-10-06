@@ -1,5 +1,5 @@
 # Keyborad rgb control for ASUS ROG Series
-Full blown app to control rgb on asus rog machines. it does
+Full blown app to control rgb on asus rog machines. it doesn't look good but does the job.
 ## Screenshots :
 ![Screenshot](/screenshots/ss1.png)
 ![Screenshot](/screenshots/ss2.png)
