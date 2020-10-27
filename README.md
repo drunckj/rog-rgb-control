@@ -19,8 +19,15 @@ chmod +x setup.sh
 ./setup.sh
 ```
 # Installation:
+## For debian and ubuntu
 get the latest version  from release section : https://github.com/drunckj/rog-rgb-control/releases/download/v2.0/RogRgbControl.deb
-
+## For other distro
+```
+git clone https://github.com/drunckj/rog-rgb-control.git
+cd rog-rgb-control/src/
+chmod +x install.sh
+sudo ./install.sh
+```
 
 
 
