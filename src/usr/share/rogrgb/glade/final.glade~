@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkMenu" id="menu1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkRadioMenuItem" id="brightness1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes">1</property>
+        <property name="use_underline">True</property>
+        <property name="draw_as_radio">True</property>
+        <signal name="toggled" handler="on_brightness1_toggled" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkRadioMenuItem" id="brightness2">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes">2</property>
+        <property name="use_underline">True</property>
+        <property name="draw_as_radio">True</property>
+        <property name="group">brightness1</property>
+        <signal name="toggled" handler="on_brightness2_toggled" swapped="no"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkRadioMenuItem" id="brightness3">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes">3</property>
+        <property name="use_underline">True</property>
+        <property name="draw_as_radio">True</property>
+        <property name="group">brightness2</property>
+        <signal name="toggled" handler="on_brightness3_toggled" swapped="no"/>
+      </object>
+    </child>
+  </object>
+  <object class="GtkApplicationWindow" id="mywindow">
+    <property name="can_focus">False</property>
+    <property name="resizable">False</property>
+    <property name="default_width">440</property>
+    <property name="default_height">440</property>
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="header">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="spacing">5</property>
+        <property name="show_close_button">True</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xpad">5</property>
+            <property name="label" translatable="yes">RGB :</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkSwitch" id="switch1">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="state-set" handler="on_switch1_state_set" swapped="no"/>
+          </object>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child type="title">
+          <object class="GtkStackSwitcher" id="switch">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="margin_left">13</property>
+            <property name="stack">stack</property>
+          </object>
+          <packing>
+            <property name="position">-1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkMenuButton" id="menu">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="focus_on_click">False</property>
+            <property name="receives_default">True</property>
+            <property name="popup">menu1</property>
+            <child>
+              <object class="GtkImage">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="pixbuf">../src/brightness.svg</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="pack_type">end</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkStack" id="stack">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkFixed">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkColorButton" id="color_static">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <signal name="color-set" handler="color_set" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">274</property>
+                    <property name="y">186</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="static_apply">
+                    <property name="label" translatable="yes">Apply</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <signal name="clicked" handler="static_apply" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">237</property>
+                    <property name="y">229</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Color :</property>
+                    <attributes>
+                      <attribute name="font-desc" value="System-ui Bold 10"/>
+                      <attribute name="style" value="normal"/>
+                      <attribute name="weight" value="heavy"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">181</property>
+                    <property name="y">161</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkImage">
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="pixbuf">../icons/qwe_download.jpg</property>
+                  </object>
+                  <packing>
+                    <property name="x">165</property>
+                    <property name="y">28</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="name">Page 1</property>
+            <property name="title" translatable="yes">Static</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkFixed">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkColorButton" id="breathing_color_1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <signal name="color-set" handler="color1_set" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">221</property>
+                    <property name="y">186</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="breathing_apply">
+                    <property name="label" translatable="yes">Apply</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <signal name="clicked" handler="breathing_apply" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">244</property>
+                    <property name="y">311</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Color :</property>
+                    <attributes>
+                      <attribute name="font-desc" value="System-ui Bold 10"/>
+                      <attribute name="style" value="normal"/>
+                      <attribute name="weight" value="heavy"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">142</property>
+                    <property name="y">161</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="speed :">
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Speed :</property>
+                    <attributes>
+                      <attribute name="font-desc" value="System-ui Bold 10"/>
+                      <attribute name="style" value="normal"/>
+                      <attribute name="weight" value="heavy"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">142</property>
+                    <property name="y">225</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkColorButton" id="breathing_color_2">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="color">#000000000000</property>
+                    <signal name="color-set" handler="color2_set" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">294</property>
+                    <property name="y">186</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkRadioButton" id="breathing_speed_1">
+                    <property name="label" translatable="yes">1</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">False</property>
+                    <property name="draw_indicator">True</property>
+                    <signal name="toggled" handler="speed_one" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">228</property>
+                    <property name="y">253</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkRadioButton" id="breathing_speed_2">
+                    <property name="label" translatable="yes">2</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">False</property>
+                    <property name="draw_indicator">True</property>
+                    <property name="group">breathing_speed_1</property>
+                    <signal name="toggled" handler="speed_two" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">273</property>
+                    <property name="y">253</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkRadioButton" id="breathing_speed_3">
+                    <property name="label" translatable="yes">3</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">False</property>
+                    <property name="draw_indicator">True</property>
+                    <property name="group">breathing_speed_1</property>
+                    <signal name="toggled" handler="speed_three" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">324</property>
+                    <property name="y">253</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkImage">
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="pixbuf">../icons/qwe_download.jpg</property>
+                  </object>
+                  <packing>
+                    <property name="x">165</property>
+                    <property name="y">28</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="name">page 2</property>
+            <property name="title" translatable="yes">Breathing</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkFixed">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkButton" id="color_apply">
+                    <property name="label" translatable="yes">Apply</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <signal name="clicked" handler="colorcycle" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">240</property>
+                    <property name="y">252</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="speed :1">
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Speed :</property>
+                    <attributes>
+                      <attribute name="font-desc" value="System-ui Bold 10"/>
+                      <attribute name="style" value="normal"/>
+                      <attribute name="weight" value="heavy"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">142</property>
+                    <property name="y">157</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkRadioButton" id="cycle_speed_1">
+                    <property name="label" translatable="yes">1</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">False</property>
+                    <property name="draw_indicator">True</property>
+                    <signal name="toggled" handler="speed_one" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">228</property>
+                    <property name="y">186</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkRadioButton" id="cycle_speed_2">
+                    <property name="label" translatable="yes">2</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">False</property>
+                    <property name="draw_indicator">True</property>
+                    <property name="group">cycle_speed_1</property>
+                    <signal name="toggled" handler="speed_two" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">273</property>
+                    <property name="y">186</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkRadioButton" id="cycle_speed_3">
+                    <property name="label" translatable="yes">3</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">False</property>
+                    <property name="draw_indicator">True</property>
+                    <property name="group">cycle_speed_2</property>
+                    <signal name="toggled" handler="speed_three" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">324</property>
+                    <property name="y">186</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkImage">
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="pixbuf">../icons/qwe_download.jpg</property>
+                  </object>
+                  <packing>
+                    <property name="x">165</property>
+                    <property name="y">28</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="name">Page 3</property>
+            <property name="title" translatable="yes">Colorcycle</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

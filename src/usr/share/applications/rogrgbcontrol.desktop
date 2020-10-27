@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=AsusRogRgb
+Exec=/usr/local/bin/rogrgbcontrol
+Icon=/usr/share/rogrgb/rog.png
+Type=Application
+Categories=System;
