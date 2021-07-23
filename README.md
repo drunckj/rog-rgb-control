@@ -31,4 +31,4 @@ sudo ./install.sh
 
 
 
-##### Want to buy me a coffee: https://paypal.me/drunkcj
+##### Want to buy me a coffee: https://paypal.me/drunkcj?locale.x=en_GB
