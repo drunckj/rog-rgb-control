@@ -31,4 +31,4 @@ sudo ./install.sh
 
 
 
-##### Want to buy me a coffee: https://www.paypal.me/drunkcj
+##### Want to buy me a coffee: https://paypal.me/drunkcj
